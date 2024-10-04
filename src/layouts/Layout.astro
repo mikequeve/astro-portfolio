@@ -130,6 +130,12 @@ const { title } = Astro.props;
     max-width: var(--max-width);
   }
 
+  @media(width <= 1279px){
+    .container{
+      padding-inline: 1rem;
+    }
+  }
+
   .center-alignment,
   .start-alignment, 
   .beetwen-alignment {
