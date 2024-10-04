@@ -1,7 +1,7 @@
 <section class="achivments__section">
   <article class="container padding-section center-alignment">
     <h2 class="section-title text-lg-center">Reconocimientos que he recibido en el mundo del desarrollo web hasta ahora.</h2>
-    <div class="achivments__container">
+    <div class="achivments__container ">
       <aside class="center-alignment">
         <img src="./img-medalla.png" alt="medalla color dorado con centro negro">
         <p class="text-lg-center">Primer lugar en <span>Competencia Regional World Skills</span> Costa Rica 2023 por la Regional Cartago</p>
@@ -18,7 +18,7 @@
 <style>
   .achivments__container{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin-top: 3rem;
@@ -44,6 +44,10 @@
   }
 
   @media (width >= 1100px){
+    .achivments__container{
+      justify-content: space-between;
+    }
+
     .achivments__container aside img{
       width: 23rem;
     }
