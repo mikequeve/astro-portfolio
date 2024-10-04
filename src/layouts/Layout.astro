@@ -1,0 +1,248 @@
+---
+import Header from '../components/landing/Header.astro';
+import '@fontsource/dm-serif-display';
+import '@fontsource-variable/onest';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Portafolio web de Mike.Vega desarrollador front-end de Costa Rica" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="./logo-favicon.svg" />
+    <meta name="theme-color" content="#4c3289" />
+    <meta name="keywords" content="Mike Vega Front-end Developer Costa Rica, mike vega, michael quesada vega" />
+    <meta name="author" content="Mike Vega" />
+    <meta name="twitter:card" content="sumary" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      name="twitter:title"
+      content="Professional Portfolio - Mike Vega"
+    />
+    <meta
+      property="og:description"
+      content="Welcome I'm Mike Vega, Front-end Developer based in Costa Rica"
+    />
+    <meta
+      property="og:image"
+      content="./portfolio-screenshot.png"
+    />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Header/>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root{
+		--max-width: 1280px;
+		--primary-color: #1d1d1d;
+		--text-color: #f1f1f1;
+		--action-color: #4c3289;
+		--border-color: #b8b7b7;
+		 --border: 1px solid;
+  	--overlay-color: rgba(76, 50, 137, 0.8);
+  	--menu-link-hover: rgba(222, 222, 222, 0.5);
+  	--drop-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.3);
+	}
+
+	html{
+		box-sizing: border-box;
+    scroll-behavior: smooth;
+	}
+
+	*,::after,::before{
+		margin: 0;
+		padding: 0;
+		box-sizing: inherit;
+	}
+
+	body{
+		overflow-x: hidden;
+		background-color: var(--text-color);
+		color: var(--primary-color);
+		font-family: 'Onest Variable', sans-serif;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+  body::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: var(--action-color);
+    border-radius: 10px;
+  }
+
+	h1,h2,h3,h4,h5,h6{
+		font-family: 'DM Serif Display', serif;
+	}
+
+	a{
+		text-decoration: none;
+		color: var(--primary-color);
+	}
+
+	section{
+		width: 100vw;
+	}
+
+	/*----- UTILITIES -----*/
+
+  .btn-primary {
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    border: solid 1px var(--primary-color);
+    border-radius: 7px;
+    color: var(--primary-color);
+  }
+
+  .btn-secondary {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--action-color);
+    border: solid 1px var(--action-color);
+    border-radius: 7px;
+    color: var(--text-color);
+  }
+
+  .btn-terciary {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--text-color);
+    border: solid 1px var(--text-color);
+    border-radius: 7px;
+    color: var(--primary-color);
+  }
+
+  .container {
+    margin-inline: auto;
+    max-width: var(--max-width);
+  }
+
+  .center-alignment,
+  .start-alignment, 
+  .beetwen-alignment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .start-alignment {
+    align-items: start;
+  }
+
+  .dark-text {
+    color: var(--primary-color);
+  }
+
+  .none {
+    display: none;
+    visibility: hidden;
+  }
+
+  .menu-link {
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    border-radius: 7px;
+  }
+
+  .menu-link:hover {
+    background-color: var(--menu-link-hover);
+  }
+
+  .padding-section {
+    padding: 2rem 1rem;
+  }
+
+  .section-title {
+    width: 100%;
+    font-size: 2rem;
+  }
+
+  p {
+    max-width: 100%;
+  }
+
+@media (width >= 768px) {
+  .center-lg-alignment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .padding-section {
+    padding: 4rem;
+  }
+
+  .start-md-alignment {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .section-title {
+    width: 80ch;
+    font-size: 4rem;
+  }
+
+  p {
+    max-width: 38.5rem;
+  }
+}
+
+@media (width >= 1100px) {
+  .start-lg-alignment {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+
+  .full-lg-screen {
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .text-lg-center {
+    text-align: center;
+  }
+
+  .text-lg-start {
+    text-align: start;
+  }
+
+  .padding-section {
+    padding: 6rem 0;
+  }
+
+  .section-title {
+    max-width: 30ch;
+  }
+
+  p {
+    max-width: 50rem;
+		line-height: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  html{
+    scroll-behavior: auto;
+  }
+}
+
+</style> 
+

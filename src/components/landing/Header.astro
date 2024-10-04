@@ -1,0 +1,69 @@
+<header class="center-alignment header">
+  <article class="center-alignment container">
+    <a href="/"><img src="./logo-black.svg" alt="logo mike.vega" class="logo"></a>
+    <nav class="header__menu">
+      <a href="#about">Sobre Mi</a>
+      <a href="#projects">Proyectos</a>
+    </nav>
+  </article>
+</header>
+
+<style>
+  .header {
+    position: fixed;
+    top: 3vh;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 2.93rem;
+    background-color: transparent;
+    flex-direction: row;
+  }
+
+  .header .container {
+    width: 18rem;
+    height: 100%;
+    border: var(--border) var(--border-color);
+    border-radius: 7px;
+    box-shadow: var(--drop-shadow);
+    background-color: var(--text-color);
+  }
+
+  .logo {
+    width: 6.25rem;
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  @media (width >= 1100px){
+    .header{
+      height: 4.5rem;
+    }
+
+    .header .container{
+      flex-direction: row;
+      justify-content: space-between;
+      width: 39rem;
+      padding-inline: 1rem;
+    }
+
+    .logo{
+      margin-left: 1.5rem;
+    }
+
+    .header__menu{
+      display: block;
+    }
+
+    .header__menu a{
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+    }
+    
+    .header__menu a:hover{
+      background-color: rgba(222, 222, 222, 0.5);
+    }
+  }
+</style>

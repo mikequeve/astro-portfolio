@@ -1,0 +1,41 @@
+[
+  {
+    "titulo": "Proyecto Catursantos",
+    "descripcion": "Refrescamiento del sitio web de la Cámara de Turismo de los Santos en San Marcos de Tarrazú, Costa Rica. Trabajo colaborativo realizado en la plataforma Wordpress. Mis funciones estuvieron enfocadas desde tareas como la elaboración del wireframe, el diseño de secciones específicas como el Banner Principal e incluso la construcción de estos diseños en el CMS.",
+    "img": "/proyectos/catursantos-mockup.png",
+    "enlace": "https://catursantos.com"
+  },
+  {
+    "titulo": "Proyecto Los Santos Challenge",
+    "descripcion": "Proyecto tipo concepto, elaborado como prueba para el programa de estudio. Enfocado en una carrera de ciclismo de montaña en La Zona de los Santos. Trabajo individual, estuve a cargo de todo el proceso de elaboración del sitio y su despliegue en github pages. Se elaboró el diseño y se codificó utilizando HTML - CSS - Vanilla Javascript.",
+    "img": "/proyectos/challenge-mockup.png",
+    "enlace": "https://mikequeve.github.io/proyecto-los-santos-challenge/",
+    "codigo": "https://github.com/mikequeve/proyecto-los-santos-challenge"
+  },
+  {
+    "titulo": "Proyecto Biblioteca de videos de Dragon Ball Z",
+    "descripcion": "Se trató de un proyecto tipo concepto, elaborado como parte del programa de estudio de Alura Latam y Oracle Next Education. Se implementaron conceptos importantes de React JS como el uso de hooks, manejo del estado, rutas con react-router-dom y manejo de un estado global, consumo de mi propia API utilizando json-server y archivos en formato json.",
+    "img": "/proyectos/dragonBallProject-mockup.png",
+    "enlace": "https://biblioteca-de-videos-dragon-ball-z-deployed.vercel.app/",
+    "codigo": "https://github.com/mikequeve/bliblioteca-de-videos-dragon-bal-z"
+  },
+  {
+    "titulo": "Proyecto Escuela de Matemáticas Hausdorff",
+    "descripcion": "Se trató de un proyecto remunerado para un cliente real, consiste en una escuela de matemáticas online con presencia en más de 5 países de América Latina. Fui el responsable de la elaboración del proyecto completo, desde sus primeras etapas de wireframing hasta la construcción del sitio utilizando la plataforma Wordpress.",
+    "img": "/proyectos/escuelaHausdorff-mockup.png",
+    "enlace": "https://escueladematematicahausdorff.com/"
+  },
+  {
+    "titulo": "Proyecto Mediabot Portafolio de servicios web",
+    "descripcion": "Proyecto tipo concepto, elaborado como parte del programa de estudio. Enfocado en un portafolio de servicios de una empresa ficticia llamada Mediabot. Trabajo individual, estuve a cargo de todo el proceso de elaboración del sitio web y su despliegue en github pages. Se elaboró el diseño y se codificó utilizando HTML - CSS - Vanilla Javascript.",
+    "img": "/proyectos/mediabot-mockup.png",
+    "enlace": "https://mikequeve.github.io/proyecto-mediabotcr",
+    "codigo": "https://github.com/mikequeve/proyecto-mediabotcr"
+  },
+  {
+    "titulo": "Proyecto Villa Noemy",
+    "descripcion": "Se trató de un proyecto remunerado para un cliente real, consiste en el sitio web para la reserva de una casa de habitación por noches ubicada en la Fortuna de San Carlos, Costa Rica. Fui el responsable de la elaboración del proyecto completo, desde sus primeras etapas de wireframing hasta la construcción del sitio utilizando la plataforma Wordpress.",
+    "img": "/proyectos/villaNoemy-mockup.png",
+    "enlace": "https://villanoemy.com"
+  }
+]

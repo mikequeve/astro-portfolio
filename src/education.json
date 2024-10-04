@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Operador de Tecnologías de Información y Comunicación.",
+    "year": "Enero-2022",
+    "institution": "Instituto Nacional de Aprendizaje.",
+    "img": "/certificaciones/operador-tecnologias-de-informacion.jpg"
+  },
+  {
+    "title": "Excel Avanzado",
+    "year": "Febrero-2022",
+    "institution": "Instituto Nacional de Aprendizaje.",
+    "img": "/certificaciones/excel-avanzado.jpg"
+  },
+  {
+    "title": "Desarrollo de Páginas Web",
+    "year": "2022-Actualidad",
+    "institution": "Instituto Nacional de Aprendizaje.",
+    "img": ""
+  },
+  {
+    "title": "Fotografía de Productos con Celular",
+    "year": "Junio-2023",
+    "institution": "Instituto Nacional de Aprendizaje.",
+    "img": "/certificaciones/fotografia-productos.jpg"
+  },
+  {
+    "title": "Mercadeo y Redes Sociales",
+    "year": "Septiembre-2023",
+    "institution": "Instituto Nacional de Aprendizaje.",
+    "img": "/certificaciones/mercadeo-y-redes.jpg"
+  }
+]

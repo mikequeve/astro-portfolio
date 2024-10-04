@@ -1,0 +1,182 @@
+<section class="start-alignment about__section" id="about">
+  <article class="start-alignment padding-section container">
+    <div class="start-alignment about__text-container">
+      <h2 class="section-title">
+        ¡Conoce un poco de mi!
+      </h2>
+      <p>
+        Me llamo Michael Quesada Vega cc. Michael Vega Bermúdez, soy un programador web enfocado en el desarrollo Front-end, apasionado por crear aplicaciones web dinámicas y funcionales. Mi dedicación y curiosidad por aprender nuevas tecnologías me impulsan a mejorar continuamente mis habilidades. <br> <br>
+        Me considero una persona proactiva, con una gran capacidad para resolver problemas y colaborar en equipo. La organización y la atención al detalle son parte clave de mi proceso de trabajo.
+      </p>
+    </div>
+    <div class="start-alignment about__stack-container">
+      <h3>Stack de habilidades que he aprendido hasta ahora:</h3>
+      <div class="stack__container-slider">
+        <div class="slider__item item01">
+          <img src="./logos/html.png" alt="logo html5">
+        </div>
+        <div class="slider__item item02">
+          <img src="./logos/css.png" alt="logo css3">
+        </div>
+        <div class="slider__item item03">
+          <img src="./logos/javascript.png" alt="logo javascript">
+        </div>
+        <div class="slider__item item04">
+          <img src="./logos/react.png" alt="logo reactjs">
+        </div>
+        <div class="slider__item item05">
+          <img src="./logos/wordpress.png" alt="logo wordpress">
+        </div>
+        <div class="slider__item item06">
+          <img src="./logos/adobe-photoshop.png" alt="logo photoshop">
+        </div>
+        <div class="slider__item item07">
+          <img src="./logos/adobe-illustrator.png" alt="logo illustrator">
+        </div>
+        <div class="slider__item item08">
+          <img src="./logos/adobe-xd.png" alt="logo adobe-xd">
+        </div>
+        <div class="slider__item item09">
+          <img src="./logos/figma.png" alt="logo figma">
+        </div>
+        <div class="slider__item item10">
+          <img src="./logos/git.png" alt="logo git">
+        </div>
+        <div class="slider__item item11">
+          <img src="./logos/github.png" alt="logo github">
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+<style>
+  .about__section{
+    min-height: 70vh;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    scroll-margin-top: 300px;
+  }
+
+  .about__section .container, .about__text-container, .about__stack-container{
+    gap: 2rem;
+  }
+
+  .about__stack-container h3{
+    font-size: 1.2rem;
+    text-align: start;
+  }
+
+  .stack__container-slider{
+    position: relative;
+    display: flex;
+    height: 130px;
+    width: 100%;
+    overflow: hidden;
+    border-block: dashed 2px var(--border-color);
+  }
+
+  .stack__container-slider::before, .stack__container-slider::after{
+    position: absolute;
+    background: linear-gradient(to right, rgba(29,29,29,1) 10%, rgba(29,29,29,0) 100%);
+    content: '';
+    height: 100%;
+    width: 15%;
+    z-index: 2;
+  }
+
+  .stack__container-slider::before{
+    left: -3px;
+    top: 0;
+  }
+
+  .stack__container-slider::after{
+    right: -3px;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+
+  .slider__item {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+    left: max(calc(100px * 11), 100%);
+    width: 100px;
+    height: 100px;
+    animation: scrollLeft 50s linear infinite;
+    z-index: 1;
+  }
+
+  .slider__item img {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  @keyframes scrollLeft {
+    to {
+      left: -100px;
+    }
+  }
+
+  .item01 {
+    animation-delay: calc(50s / 11 * (11 - 1) * -1);
+  }
+  .item02 {
+    animation-delay: calc(50s / 11 * (11 - 2) * -1);
+  }
+  .item03 {
+    animation-delay: calc(50s / 11 * (11 - 3) * -1);
+  }
+  .item04 {
+    animation-delay: calc(50s / 11 * (11 - 4) * -1);
+  }
+  .item05 {
+    animation-delay: calc(50s / 11 * (11 - 5) * -1);
+  }
+  .item06 {
+    animation-delay: calc(50s / 11 * (11 - 6) * -1);
+  }
+  .item07 {
+    animation-delay: calc(50s / 11 * (11 - 7) * -1);
+  }
+  .item08 {
+    animation-delay: calc(50s / 11 * (11 - 8) * -1);
+  }
+  .item09 {
+    animation-delay: calc(50s / 11 * (11 - 9) * -1);
+  }
+  .item10 {
+    animation-delay: calc(50s / 11 * (11 - 10) * -1);
+  }
+  .item11 {
+    animation-delay: calc(50s / 11 * (11 - 11) * -1);
+  }
+
+  @media (width >= 1100px){
+    .about__section .container{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 100%;
+	  }
+
+    .about__text-container{
+      width: 45%;
+      gap: 4rem;
+    }
+
+    .about__text-container p{
+      width: 50ch;
+    }
+
+    .about__stack-container{
+      width: 45%;
+    }
+  }
+
+
+</style>

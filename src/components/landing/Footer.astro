@@ -1,0 +1,41 @@
+<footer class="site__footer center-alignment">
+  <article class="container center-alignment">
+    <aside class="social">
+      <a href="https://github.com/mikequeve" target="_blank" rel="noopener"><img src="./github.svg" alt="logo-github" class="social__icon"></a>
+      <a href="https://www.linkedin.com/in/mikequeve" target="_blank" rel="noopener"><img src="./linkedin.svg" alt="logo-linkedin" class="social__icon"></a>
+      <a href="mailto:michaelvega46@gmail.com"><img src="./mail.svg" alt="icono de un sobre" class="social__icon"></a>
+    </aside>
+    <p>Desarrollado en Astro por:</p>
+    <img src="./logo-white.svg" alt="logo mike-vega" class="logo">
+  </article>
+</footer>
+
+<style>
+  .site__footer{
+    background-color: var(--primary-color);
+    padding-block: 1rem;
+    color: var(--text-color);
+  }
+
+  .social{
+    display: flex;
+    gap: 1rem;
+    margin-block: .5rem;
+  }
+
+  .social__icon{
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .logo{
+    margin-block: 1rem;
+    width: 7rem;
+  }
+
+  @media (width >= 1100px){
+    .site__footer{
+      padding-block: 2rem;
+    }
+  }
+</style>
