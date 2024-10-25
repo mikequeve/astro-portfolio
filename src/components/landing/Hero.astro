@@ -11,49 +11,58 @@
 </section>
 
 <style>
-  .banner__section {
-	width: 100vw;
-  background: url('/banner-bg.png') right no-repeat;
-  background-size: cover;
-  background-color: var(--text-color);
-}
+  @media(width <= 768px){
+    .banner__section .container aside{
+      width: 100%;
 
-.banner__section .container {
-  width: 100%;
-  min-height: 100vh;
-  background: linear-gradient(
-    180deg,
-    rgba(215, 215, 215, 0.4) 0%,
-    rgba(186, 186, 189, 0.67) 35%,
-    rgba(241, 241, 241, 1) 100%
-  );
-}
-
-.banner__section .container aside {
-  margin-top: 1rem;
-  flex-direction: row;
-	justify-content: space-between;
-	gap: 1rem;
-}
-
-.main-title {
-  color: var(--primary-color);
-	font-size: 2rem;
-}
-
-.main-title span {
-  color: var(--action-color);
-}
-
-@media (width >= 1100px){
-  .banner__section .container{
-		background: transparent;
-	}
-
-	.main-title {
-    width: 55rem;
-    font-size: 4rem;
+    }
   }
-}
+  .banner__section {
+    width: 100vw;
+    background: url('/banner-bg.png') right no-repeat;
+    background-size: cover;
+    background-color: var(--text-color);
+  }
+
+  .banner__section .container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(
+      180deg,
+      rgba(215, 215, 215, 0.4) 0%,
+      rgba(186, 186, 189, 0.67) 35%,
+      rgba(241, 241, 241, 1) 100%
+    );
+  }
+
+  .banner__section .container aside {
+    margin-top: 1rem;
+    flex-direction: row;
+    justify-content: start;
+  }
+
+  .banner__section .container aside a{
+    margin-right: 1rem;
+  }
+
+  .main-title {
+    color: var(--primary-color);
+    font-size: 2rem;
+  }
+
+  .main-title span {
+    color: var(--action-color);
+  }
+
+  @media (width >= 1100px){
+    .banner__section .container{
+      background: transparent;
+    }
+
+    .main-title {
+      width: 55rem;
+      font-size: 4rem;
+    }
+  }
 
 </style>
