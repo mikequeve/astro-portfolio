@@ -1,9 +1,9 @@
 <section class="center-alignment banner__section">
   <article class="center-alignment start-md-alignment padding-section container">
-    <h1 class="text-lg-start main-title">
+    <h1 class="main-title">
       ¡Hola! <br> Soy <span>Mike Vega</span>, un apasionado desarrollador Front-end ubicado en Costa Rica.
     </h1>
-    <aside class="center-alignment">
+    <aside>
       <a href="https://drive.google.com/file/d/1i9n7pOv_U1uCcRH9Wj-41NDpQpgtMqfu/view?usp=sharing" target="_blank" class="btn-primary">Explorar CV</a>
       <a href="#contact" class="btn-secondary">Contactarme</a>
     </aside>
@@ -30,9 +30,10 @@
   }
 
   .banner__section .container aside {
-    margin-top: 1rem;
+    display: flex;
     flex-direction: row;
     justify-content: start;
+    margin-top: 1rem;
   }
 
   .banner__section .container aside a{
@@ -40,12 +41,19 @@
   }
 
   .main-title {
+    text-align: center;
     color: var(--primary-color);
     font-size: 2rem;
   }
 
   .main-title span {
     color: var(--action-color);
+  }
+
+  @media(width >= 769px){
+    .main-title{
+      text-align: start;
+    }
   }
 
   @media (width >= 1100px){
