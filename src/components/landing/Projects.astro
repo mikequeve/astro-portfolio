@@ -39,14 +39,14 @@ import proyectos from '../../projects.json'
   }
 
   .projects__section .container{
-    gap: 2rem;
+    gap: 2.5rem;
   }
 
   .projects__container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
     width: 100%;
-    place-content: center;
+    place-content: center;    
   }
 
   .project__card{
@@ -99,6 +99,12 @@ import proyectos from '../../projects.json'
   }
 
   @media (width >= 1100px){
+    .project__card:hover{
+      transform: translateY(-10px);
+      box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.6);
+      transition: all 500ms ease-in-out;
+    }
+
     .project__card-buttons a:hover{
       background-color: var(--action-color);
       border: solid 1px var(--action-color);
