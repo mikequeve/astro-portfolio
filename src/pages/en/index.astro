@@ -1,0 +1,28 @@
+---
+import Hero from '../../components/landing/Hero.astro';
+import About from '../../components/landing/About.astro';
+import Projects from '../../components/landing/Projects.astro';
+import Education from '../../components/landing/Education.astro'
+import Layout from '../../layouts/Layout.astro';
+import Achivments from '../../components/landing/Achivments.astro';
+import Contact from '../../components/landing/Contact.astro';
+import Certifications from '../../components/landing/Certifications.astro';
+import useTranslations from '../../i118n/utils';
+import { languageList } from '../../i118n/ui';
+
+const currentLang = Astro.currentLocale || 'es';
+
+const translateLabels = useTranslations(currentLang as keyof typeof languageList);
+---
+
+<Layout title="MIKE.VEGA Desarrollador Front-end.">
+	<main>
+		<Hero translateLabels={translateLabels}/>
+		<About translateLabels={translateLabels}/>
+		<Projects translateLabels={translateLabels}/>
+		<Education translateLabels={translateLabels}/>
+		<Achivments translateLabels={translateLabels}/>
+		<Contact translateLabels={translateLabels}/>
+		<Certifications translateLabels={translateLabels}/>
+	</main>
+</Layout>

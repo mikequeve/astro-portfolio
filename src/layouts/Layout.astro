@@ -2,16 +2,23 @@
 import Header from '../components/landing/Header.astro';
 import '@fontsource/dm-serif-display';
 import '@fontsource-variable/onest';
+import Footer from '../components/landing/Footer.astro';
+import useTranslations from '../i118n/utils';
+import { languageList } from '../i118n/ui';
 
 interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
+
+const currentLang = Astro.currentLocale || 'es';
+
+const translateLabels = useTranslations(currentLang as keyof typeof languageList);
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={ currentLang }>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Portafolio web de Mike.Vega desarrollador web de Costa Rica enfocado en el desarrollo front-end." />
@@ -49,8 +56,20 @@ const { title } = Astro.props;
     gtag('config', 'G-N9V5M5HW4C');
   </script>
 	<body>
-		<Header/>
-		<slot />
+		<Header translateLabels={translateLabels}/>
+    <article class="translate__box">
+      {Object.entries(languageList).map(([key, label]: [string, string], index) => {
+        const href = key === 'en' ? `/${key}` : '/';
+        return (
+          <span>
+            <a href={href}>{label}</a>
+            {index < Object.entries(languageList).length - 1 && ' | '}
+          </span>
+          )
+      })}
+    </article>
+      <slot/>
+    <Footer translateLabels={translateLabels}/>
 	</body>
 </html>
 <style is:global>
@@ -259,6 +278,24 @@ const { title } = Astro.props;
   html{
     scroll-behavior: auto;
   }
+}
+
+.translate__box{
+  position: fixed;
+  bottom: 4vh;
+  left: 4vw;
+  display: flex;
+  justify-content: center;
+  gap: .3rem;
+  padding-inline: 1.5rem;
+  padding-block: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: solid 1px var(--border-color);
+  border-radius: 10px;
+  box-shadow: var(--drop-shadow);
+  background-color: var(--text-color);
+  z-index: 99;
 }
 
 </style> 

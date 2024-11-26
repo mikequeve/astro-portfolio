@@ -1,12 +1,12 @@
 ---
 import proyectos from '../../projects.json'
+const { translateLabels } = Astro.props;
+
 ---
 
 <section class="projects__section" id="projects">
   <article class="center-alignment container padding-section">
-    <h2 class="section-title text-lg-center">
-      Proyectos en los que he trabajado.
-    </h2>
+    <h2 class="section-title text-lg-center">{translateLabels('projects.title')}</h2>
     <div class="container projects__container">
       {
         proyectos.map((proyecto) =>(
@@ -14,8 +14,14 @@ import proyectos from '../../projects.json'
             <img src={proyecto.img} alt={proyecto.titulo}>
             <figcaption class="project__card-content">
               <h4 class="project__card-title">{proyecto.titulo}</h4>
-              <p class="project__card-description">{proyecto.descripcion}</p>
               <aside class="project__card-tech">
+                {
+                  proyecto.stack.map((tech) => {
+                    return(
+                      <img class="tech-icon" src={tech} alt="">
+                    )
+                  })
+                }
               </aside>
               <div class="project__card-buttons">
                 {
@@ -39,14 +45,14 @@ import proyectos from '../../projects.json'
   }
 
   .projects__section .container{
-    gap: 2.5rem;
+    gap: 2rem;
   }
 
   .projects__container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
     width: 100%;
-    place-content: center;    
+    place-content: center;
   }
 
   .project__card{
@@ -68,16 +74,21 @@ import proyectos from '../../projects.json'
     color: var(--text-color);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Onest Variable', sans-serif;
   }
-
-  .project__card-content p{
-    font-size: .9rem;
-    margin-top: .8rem;
-  }
-
   .project__card-tech{
+    display: flex;
+    justify-content: center;
     width: 100%;
     margin-top: 1rem;
+    gap: 1rem;
+  }
+
+   .project__card .project__card-content .tech-icon{
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
   .project__card-tech span{

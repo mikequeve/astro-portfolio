@@ -1,16 +1,15 @@
+---
+const { translateLabels } = Astro.props;
+---
+
 <section class="center-alignment about__section" id="about">
   <article class="center-alignment padding-section container">
-    <h2 class="section-title text-center">
-      ¡Conoce un poco de mi!
-    </h2>
+    <h2 class="section-title text-center">{translateLabels('about.title')}</h2>
     <div class="start-alignment about__text-container">
-      <p>
-        Me llamo Michael Quesada Vega cc. Michael Vega Bermúdez, soy un programador web enfocado en el desarrollo Front-end, apasionado por crear aplicaciones web dinámicas y funcionales. Mi dedicación y curiosidad por aprender nuevas tecnologías me impulsan a mejorar continuamente mis habilidades. <br> <br>
-        Me considero una persona proactiva, con una gran capacidad para resolver problemas y colaborar en equipo. La organización y la atención al detalle son parte clave de mi proceso de trabajo.
-      </p>
+      <p set:html={translateLabels('about.text')}></p>
     </div>
     <div class="start-alignment about__stack-container">
-      <h3>Stack de habilidades que he aprendido hasta ahora:</h3>
+      <h3>{translateLabels('about.subtitle')}</h3>
       <div class="stack__container-slider">
         <div class="slider__item item01">
           <img src="./logos/html.png" alt="logo html5">

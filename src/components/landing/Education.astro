@@ -1,10 +1,11 @@
 ---
 import certificaciones from '../../education.json'
+const { translateLabels } = Astro.props;
 ---
 
 <section class=" education__section">
   <article class="center-alignment padding-section container">
-    <h2 class="section-title text-lg-center">Certicaciones que he obtenido en los últimos años.</h2>
+    <h2 class="section-title text-lg-center">{translateLabels('education.title')}</h2>
     <div class="timeline__container">
       {
         certificaciones.map((certificacion) => (

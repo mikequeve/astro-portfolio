@@ -1,14 +1,18 @@
+---
+const { translateLabels } = Astro.props;
+---
+
 <section class="achivments__section">
   <article class="container padding-section center-alignment">
-    <h2 class="section-title text-lg-center">Reconocimientos que he recibido en el mundo del desarrollo web hasta ahora.</h2>
+    <h2 class="section-title text-lg-center">{translateLabels('achivements.title')}</h2>
     <div class="achivments__container ">
       <aside class="center-alignment">
         <img src="./img-medalla.png" alt="medalla color dorado con centro negro">
-        <p class="text-lg-center">Primer lugar en <span>Competencia Regional World Skills</span> Costa Rica 2023 por la Regional Cartago</p>
+        <p class="text-lg-center" set:html={translateLabels('achivements.regional')}></p>
       </aside>
       <aside class="center-alignment">
         <img src="./img-medalla02.png" alt="medalla color dorado con centro negro">
-        <p class="text-lg-center">Segundo lugar en <span>Competencia Nacional World Skills</span> Heredia, Costa Rica 2024</p>
+        <p class="text-lg-center" set:html={translateLabels('achivements.national')}></span></p>
       </aside>
       
     </div>

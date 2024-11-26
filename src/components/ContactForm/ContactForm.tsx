@@ -12,7 +12,7 @@ const ContactForm = () => {
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!form.name || !form.email || !form.message) {
@@ -46,7 +46,9 @@ const ContactForm = () => {
     }
   };
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setForm({
       ...form,
       [e.target.name]: e.target.value,
@@ -63,20 +65,20 @@ const ContactForm = () => {
         <input
           type='text'
           name='name'
-          placeholder='Nombre Completo'
+          placeholder='Name'
           onChange={handleChange}
           value={form.name}
         />
         <input
           type='text'
           name='email'
-          placeholder='Correo Electrónico'
+          placeholder='Email'
           onChange={handleChange}
           value={form.email}
         />
         <textarea
           name='message'
-          placeholder='Comentario'
+          placeholder='Comments'
           rows={7}
           onChange={handleChange}
           value={form.message}

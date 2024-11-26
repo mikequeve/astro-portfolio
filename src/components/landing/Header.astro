@@ -1,9 +1,14 @@
-<header class="center-alignment header">
+---
+const { translateLabels }= Astro.props;
+---
+
+
+<header class="center-alignment header" >
   <article class="center-alignment container">
     <a href="/"><img src="./logo-black.svg" alt="logo mike.vega" class="logo"></a>
     <nav class="header__menu">
-      <a href="#about">Sobre Mi</a>
-      <a href="#projects">Proyectos</a>
+      <a href="#about">{translateLabels('nav.about')}</a>
+      <a href="#projects">{translateLabels('nav.projects')}</a>
     </nav>
   </article>
 </header>

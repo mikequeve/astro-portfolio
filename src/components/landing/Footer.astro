@@ -1,17 +1,23 @@
+---
+const { translateLabels }= Astro.props;
+---
+
 <footer class="site__footer center-alignment">
   <article class="container center-alignment">
     <aside class="social">
       <a href="https://github.com/mikequeve" target="_blank" rel="noopener"><img src="./github.svg" alt="logo-github" class="social__icon"></a>
       <a href="https://www.linkedin.com/in/mikequeve" target="_blank" rel="noopener"><img src="./linkedin.svg" alt="logo-linkedin" class="social__icon"></a>
       <a href="mailto:michaelvega46@gmail.com"><img src="./mail.svg" alt="icono de un sobre" class="social__icon"></a>
+      <a href="https://www.behance.net/michaelvega12" target="_blank" rel="noopener"><img src="./behance-icon.svg" alt="logo-behance" class="social__icon behance-icon"></a>
     </aside>
-    <p>Desarrollado en Astro por:</p>
+    <p>{translateLabels('footer.copy')}</p>
     <img src="./logo-white.svg" alt="logo mike-vega" class="logo">
   </article>
 </footer>
 
 <style>
   .site__footer{
+    width: 100%;
     background-color: var(--primary-color);
     padding-block: 1rem;
     color: var(--text-color);
@@ -26,6 +32,10 @@
   .social__icon{
     width: 2.5rem;
     height: 2.5rem;
+  }
+
+  .behance-icon{
+    width: 2rem;
   }
 
   .logo{

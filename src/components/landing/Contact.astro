@@ -1,11 +1,12 @@
 ---
+const { translateLabels } = Astro.props;
 import ContactForm from "../ContactForm/ContactForm";
 ---
 
 <section class="center-alignment contact__section" id="contact">
   <article class="center-alignment padding-section container">
-    <h2 class="section-title text-lg-center">Enviáme tus comentarios.</h2>
-    <p class="text-lg-center">Ponte en contacto conmigo si quieres saber más acerca de lo que hago, si quieres trabajar conmigo o darme alguna recomendación.</p>
+    <h2 class="section-title text-lg-center">{translateLabels('contact.title')}</h2>
+    <p class="text-lg-center">{translateLabels('contact.subtitle')}</p>
     <ContactForm client:load/>
   </article>
 </section>
