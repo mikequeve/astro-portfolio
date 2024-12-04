@@ -16,6 +16,8 @@ export const labels = {
       'My name is Michael Quesada Vega cc. Michael Vega Bermudez, I am a web developer focused on Front-end development, passionate about creating dynamic and functional web applications. My dedication and curiosity to learn new technologies drives me to continuously improve my skills <br/> <br/> I consider myself a proactive person, with a great ability to solve problems and collaborate in a team. Organization and attention to detail are a key part of my work process.',
     'about.subtitle': 'Stack of skills I have learned so far:',
     'projects.title': 'Projects I have worked on.',
+    'projects.CodeBtn': 'Code',
+    'projects.ProjectBtn': 'Project',
     'education.title': 'Certifications I have obtained in the last few years.',
     'achivements.title':
       'Recognitions I have received in the web development world up to now.',
@@ -46,6 +48,8 @@ export const labels = {
       'Me llamo Michael Quesada Vega cc. Michael Vega Bermúdez, soy un programador web enfocado en el desarrollo Front-end, apasionado por crear aplicaciones web dinámicas y funcionales. Mi dedicación y curiosidad por aprender nuevas tecnologías me impulsan a mejorar continuamente mis habilidades. <br> <br> Me considero una persona proactiva, con una gran capacidad para resolver problemas y colaborar en equipo. La organización y la atención al detalle son parte clave de mi proceso de trabajo.',
     'about.subtitle': 'Stack de habilidades que he aprendido hasta ahora:',
     'projects.title': 'Proyectos en los que he trabajado.',
+    'projects.CodeBtn': 'Código',
+    'projects.ProjectBtn': 'Proyecto',
     'education.title': 'Certicaciones que he obtenido en los últimos años.',
     'achivements.title':
       'Reconocimientos que he recibido en el mundo del desarrollo web hasta ahora.',
