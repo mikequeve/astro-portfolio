@@ -14,7 +14,8 @@ const { translateLabels } = Astro.props;
             <img src={proyecto.img} alt={proyecto.titulo}>
             <figcaption class="project__card-content">
               <h4 class="project__card-title">{proyecto.titulo}</h4>
-              <aside class="project__card-tech">
+              <article class="center-alignment card__content">
+                <aside class="project__card-tech">
                 {
                   proyecto.stack.map((tech) => {
                     return(
@@ -26,11 +27,12 @@ const { translateLabels } = Astro.props;
               <div class="project__card-buttons">
                 {
                   proyecto.codigo &&(
-                    <a href={proyecto.codigo} target="_blank" rel="noopener noreferrer" class="btn-terciary">{translateLabels('projects.CodeBtn')}</a>
+                    <a href={proyecto.codigo} target="_blank" rel="noopener noreferrer" title="code"><img src="/logos/github.png" alt="github icon" class="button-icon"></a>
                   )
                 }
-                <a href={proyecto.enlace} target="_blank" rel="noopener noreferrer" class="btn-terciary">{translateLabels('projects.ProjectBtn')}</a>
+                <a href={proyecto.enlace} target="_blank" rel="noopener noreferrer" title="website" ><img src="/logos/website.png" alt="website icon" class="button-icon"></a>
               </div>
+              </article>
             </figcaption>
           </figure>
         ))
@@ -78,36 +80,43 @@ const { translateLabels } = Astro.props;
     text-transform: uppercase;
     font-family: 'Onest Variable', sans-serif;
   }
+
+  .card__content{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
   .project__card-tech{
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    align-items: center;
     width: 100%;
-    margin-top: 1rem;
     gap: 1rem;
   }
 
    .project__card .project__card-content .tech-icon{
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
   }
-
-  .project__card-tech span{
-    font-size: .8rem;
-    padding: .3rem 1rem;
-    background-color: var(--action-color);
-  }
-
   .project__card-buttons{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1.5rem;
+    justify-content: end;
+    align-items: flex-end;
+    gap: 1rem;
   }
 
-  .project__card-buttons a{
-    margin-inline: 1rem;
-    font-size: .8rem;
+  .project__card-buttons a {
+    width: 2rem;
+    height: 2rem;
   }
+
+  .project__card-buttons a .button-icon{
+    width: 2rem;
+    height: 2rem;
+  }
+
 
   @media (width >= 1100px){
     .project__card:hover{
@@ -115,13 +124,6 @@ const { translateLabels } = Astro.props;
       box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.6);
       transition: all 500ms ease-in-out;
     }
-
-    .project__card-buttons a:hover{
-      background-color: var(--action-color);
-      border: solid 1px var(--action-color);
-      color: var(--text-color);
-    }
   }
-  
 
 </style>
