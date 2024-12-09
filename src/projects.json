@@ -8,7 +8,7 @@
       "/logos/css.png",
       "/logos/javascript.png"
     ],
-    "enlace": "https://mikequeve.github.io/proyecto-los-santos-challenge/",
+    "enlace": "https://mikequeve.github.io/los-santos-challenge/",
     "codigo": "https://github.com/mikequeve/proyecto-los-santos-challenge"
   },
   {
@@ -26,11 +26,7 @@
   {
     "titulo": "Escuela de Matemáticas Hausdorff",
     "img": "/proyectos/escuelaHausdorff-mockup.png",
-    "stack": [
-      "/logos/figma.png",
-      "/logos/adobe-photoshop.png",
-      "/logos/wordpress.png"
-    ],
+    "stack": ["/logos/figma.png", "/logos/adobe-photoshop.png", "/logos/wordpress.png"],
     "enlace": "https://escueladematematicahausdorff.com/"
   },
   {
@@ -48,21 +44,13 @@
   {
     "titulo": "Villa Noemy",
     "img": "/proyectos/villaNoemy-mockup.png",
-    "stack": [
-      "/logos/figma.png",
-      "/logos/adobe-photoshop.png",
-      "/logos/wordpress.png"
-    ],
+    "stack": ["/logos/figma.png", "/logos/adobe-photoshop.png", "/logos/wordpress.png"],
     "enlace": "https://villanoemy.com"
   },
   {
     "titulo": "Casa del Deporte",
     "img": "/proyectos/casadeporte-mockup.png",
-    "stack": [
-      "/logos/figma.png",
-      "/logos/adobe-photoshop.png",
-      "/logos/wordpress.png"
-    ],
+    "stack": ["/logos/figma.png", "/logos/adobe-photoshop.png", "/logos/wordpress.png"],
     "enlace": "https://casadeporte.com"
   }
 ]
