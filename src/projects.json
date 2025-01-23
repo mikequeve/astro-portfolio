@@ -24,10 +24,15 @@
     "codigo": "https://github.com/mikequeve/bliblioteca-de-videos-dragon-bal-z"
   },
   {
-    "titulo": "Escuela de Matemáticas Hausdorff",
-    "img": "/proyectos/escuelaHausdorff-mockup.png",
-    "stack": ["/logos/figma.png", "/logos/adobe-photoshop.png", "/logos/wordpress.png"],
-    "enlace": "https://escueladematematicahausdorff.com/"
+    "titulo": "Nike Ecommerce Concept Project",
+    "img": "/proyectos/nikeEcommerce-mockup.png",
+    "stack": [
+      "/logos/figma.png",
+      "/logos/html.png",
+      "/logos/css.png",
+      "/logos/javascript.png"
+    ],
+    "enlace": "https://mikequeve.github.io/nike-ecommerce/"
   },
   {
     "titulo": "Mediabot Portafolio de servicios web",
